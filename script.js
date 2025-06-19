@@ -7,6 +7,13 @@ document.addEventListener('DOMContentLoaded', function () {
   const taskInput = document.getElementById('task-input');
   const taskList = document.getElementById('task-list');
 
+  const taskText = taskInput.value.trim();
+  if (taskText === '') {
+  alert('Please enter a task!');
+  return;
+}
+
+
   // Load and display tasks from Local Storage when the page loads
   loadTasks();
 
